@@ -3,11 +3,11 @@ package com.ivoronline.springboot_deserialize_requestparameters.DTO;
 public class PersonDTO {
 
   //PROPERTIES
-  public String  firstName;
+  public String  name;
   public Integer age;
 
-  //SETTERS (used for deserialization)
-  public void setName(String  name) { this.firstName = name + " Setter"; }
-  public void setAge (Integer age ) { this.age       = age;              }
+  //SETTERS (Setter Names are HTTP Request Parameters)
+  public void setFirstName(String  reqName) { this.name = reqName + " Setter"; }
+  public void setAge      (Integer reqAge ) { this.age  = reqAge;              }
 
 }

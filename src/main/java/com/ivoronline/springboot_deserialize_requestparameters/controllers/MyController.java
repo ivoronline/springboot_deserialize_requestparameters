@@ -1,17 +1,18 @@
 package com.ivoronline.springboot_deserialize_requestparameters.controllers;
 
 import com.ivoronline.springboot_deserialize_requestparameters.DTO.PersonDTO;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class MyController {
 
-  @ResponseBody
-  @RequestMapping("/Hello")
-  public String hello(PersonDTO personDTO) {
-    return "Hello " + personDTO.firstName;
+  //================================================================
+  // HELLO
+  //================================================================
+  @RequestMapping("Hello")
+  String hello(PersonDTO personDTO) {
+    return "Hello " + personDTO.name;
   }
 
 }
